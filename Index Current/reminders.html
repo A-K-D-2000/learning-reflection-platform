@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reminders</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="reminders.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Explain It Later</h2>
+
+    <ul>
+        <li><a href="Index2.html">Dashboard</a></li>
+        <li><a href="add-item.html">Add Learning Item</a></li>
+        <li><a href="my-items.html">My Learning Items</a></li>
+        <li><a href="reminders.html">Reminders</a></li>
+        <li><a href="#">Analytics</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Logout</a></li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main">
+
+    <div class="header">
+        <h1>Reminders</h1>
+        <p>Topics you should revisit before your target readiness date.</p>
+    </div>
+
+
+    <!-- Reminder Cards -->
+    <div class="reminder-list">
+
+        <div class="reminder-card urgent">
+
+            <div class="reminder-header">
+                <h3>JavaScript Closures</h3>
+                <span class="status">Confused</span>
+            </div>
+
+            <p><strong>Target Date:</strong> 15 Feb 2026</p>
+            <p><strong>Priority:</strong> High</p>
+
+            <div class="reminder-actions">
+                <button class="open-btn">Open Resource</button>
+                <button class="visit-btn">Mark as Revisited</button>
+            </div>
+
+        </div>
+
+
+
+        <div class="reminder-card">
+
+            <div class="reminder-header">
+                <h3>React useEffect Hook</h3>
+                <span class="status partial">Partially Clear</span>
+            </div>
+
+            <p><strong>Target Date:</strong> 20 Feb 2026</p>
+            <p><strong>Priority:</strong> Medium</p>
+
+            <div class="reminder-actions">
+                <button class="open-btn">Open Resource</button>
+                <button class="visit-btn">Mark as Revisited</button>
+            </div>
+
+        </div>
+
+
+
+        <div class="reminder-card">
+
+            <div class="reminder-header">
+                <h3>MongoDB Indexing</h3>
+                <span class="status clear">Clear</span>
+            </div>
+
+            <p><strong>Target Date:</strong> 28 Feb 2026</p>
+            <p><strong>Priority:</strong> Low</p>
+
+            <div class="reminder-actions">
+                <button class="open-btn">Open Resource</button>
+                <button class="visit-btn">Mark as Revisited</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
