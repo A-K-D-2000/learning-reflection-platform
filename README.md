@@ -1,4 +1,4 @@
-<h1Learning Reflection Platform</h1>
+<h1>Learning Reflection Platform</h1>
 
 <p>A full-stack MERN-based learning platform designed to help users manage, track, and improve their learning progress efficiently.</p>
 
