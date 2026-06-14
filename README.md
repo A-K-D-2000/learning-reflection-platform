@@ -1,205 +1,200 @@
-<h1>Learning Reflection Platform</h1>
+# Learning Reflection Platform
 
-<p>A full-stack MERN-based learning platform designed to help users manage, track, and improve their learning progress efficiently.</p>
+A full-stack MERN-based learning platform designed to help users manage, track, and improve their learning progress efficiently.
 
+![image](https://github.com/user-attachments/assets/82187ce6-e1ba-4d37-a546-c3cd5e5b77b1)
 
-<img width="1645" height="954" alt="image" src="https://github.com/user-attachments/assets/82187ce6-e1ba-4d37-a546-c3cd5e5b77b1" />
+## Table of Contents
+- Features
+- Tools and Technologies
+- Dependencies
+- Prerequisites
+- Environment Variables
+- Installation and Setup
+- Database Configuration
+- Project Structure
+- API Endpoints
+- Frontend Pages
+- NPM Scripts
+- Notes
 
-<h2>Table of Contents</h2>
-<ul>
-<li>Features</li>
-<li>Tools and Technologies</li>
-<li>Dependencies</li>
-<li>Prerequisites</li>
-<li>Installation and Setup</li>
-<li>Database Configuration</li>
-<li>Project Structure</li>
-<li>API Endpoints</li>
-<li>Frontend Pages</li>
-<li>NPM Scripts</li>
-<li>Notes</li>
-</ul>
+## Features
 
-<h2>Features</h2>
+### User Features
+- User Signup and Login
+- Secure Authentication
+- Dashboard to track learning progress
+- View completed and pending topics
+- Add, update, and delete learning items
+- User profile management
 
-<h3>User Features</h3>
-<ul>
-<li>User Signup and Login</li>
-<li>Secure Authentication</li>
-<li>Dashboard to track learning progress</li>
-<li>View completed and pending topics</li>
-<li>Add, update, and delete learning items</li>
-<li>User profile management</li>
-</ul>
+### Developer Features
+- RESTful API architecture
+- Protected routes (frontend and backend)
+- Modular backend structure
+- API integration using Axios
+- Error handling and validations
+- Scalable project structure
 
-<h3>Developer Features</h3>
-<ul>
-<li>RESTful API architecture</li>
-<li>Protected routes (frontend and backend)</li>
-<li>Modular backend structure</li>
-<li>API integration using Axios</li>
-<li>Error handling and validations</li>
-<li>Scalable project structure</li>
-</ul>
+## Tools and Technologies
+- Frontend: React.js
+- Backend: Node.js + Express.js
+- Database: MongoDB
+- API Testing: Postman
+- Version Control: GitHub
 
-<h2>Tools and Technologies</h2>
-<ul>
-<li>Frontend: React.js</li>
-<li>Backend: Node.js + Express.js</li>
-<li>Database: MongoDB</li>
-<li>API Testing: Postman</li>
-<li>Version Control: GitHub</li>
-</ul>
+## Dependencies
 
-<h2>Dependencies</h2>
+### Backend
+- express
+- mongoose
+- cors
+- jsonwebtoken
+- dotenv
 
-<h3>Backend</h3>
-<ul>
-<li>express</li>
-<li>mongoose</li>
-<li>cors</li>
-<li>jsonwebtoken</li>
-</ul>
+### Frontend
+- react
+- react-router-dom
+- axios
 
-<h3>Frontend</h3>
-<ul>
-<li>react</li>
-<li>react-router-dom</li>
-<li>axios</li>
-</ul>
+## Prerequisites
+- Node.js installed
+- npm installed
+- MongoDB database (local or MongoDB Atlas)
+- Code editor (recommended: VS Code)
 
-<h2>Prerequisites</h2>
-<ul>
-<li>Node.js installed</li>
-<li>npm installed</li>
-<li>MongoDB database (local or MongoDB Atlas)</li>
-<li>Code editor (recommended: VS Code)</li>
-</ul>
+## Environment Variables
 
-<h2>Installation and Setup</h2>
+Create a `.env` file inside the `/server` folder with the following variables:
 
-<h3>1. Clone the Repository</h3>
-<pre><code>git clone https://github.com/A-K-D-2000/LearningPlatform.git
-cd LearningPlatform</code></pre>
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+PORT=5000
+```
 
-<h3>2. Install Dependencies</h3>
+> Never share or commit your `.env` file. It is already included in `.gitignore`.
 
-<p><b>Root:</b></p>
-<pre><code>npm install</code></pre>
+## Installation and Setup
 
-<p><b>Backend:</b></p>
-<pre><code>cd server
-npm install</code></pre>
+### 1. Clone the Repository
+```bash
+git clone https://github.com/A-K-D-2000/learning-reflection-platform.git
+cd learning-reflection-platform
+```
 
-<p><b>Frontend:</b></p>
-<pre><code>cd ../client
-npm install</code></pre>
+### 2. Install Dependencies
 
-<h2>Database Configuration</h2>
+**Root:**
+```bash
+npm install
+```
 
-<p>Go to your MongoDB setup and get your connection string.</p>
+**Backend:**
+```bash
+cd server
+npm install
+```
 
-<pre><code>mongodb+srv://&lt;username&gt;:&lt;password&gt;@cluster0.mongodb.net/your-db-name</code></pre>
+**Frontend:**
+```bash
+cd ../client
+npm install
+```
 
-<p>Open the file:</p>
-<pre><code>server/config/db.js</code></pre>
+## Database Configuration
 
-<p>Replace:</p>
-<pre><code>YOUR_MONGODB_CONNECTION_STRING</code></pre>
+This project uses environment variables for database configuration. After creating your `.env` file inside `/server` as described above, no further changes to the code are needed.
 
-<p>with your actual MongoDB connection string.</p>
+Make sure your MongoDB connection string follows this format:
+mongodb+srv://<username>:<password>@cluster0.mongodb.net/your-db-name
+## Run the Application
 
-<h2>Run the Application</h2>
+**Start Backend (from root folder):**
+```bash
+node server/server.js
+```
 
-<p><b>Start Backend (from root folder):</b></p>
-<pre><code>node server/server.js</code></pre>
+**Start Frontend:**
+```bash
+cd client
+npm run dev
+```
 
-<p><b>Start Frontend:</b></p>
-<pre><code>cd client
-npm run dev</code></pre>
+## Application URLs
+- Frontend: http://localhost:3000
+- Backend: http://localhost:5000
 
-<h2>Application URLs</h2>
-<ul>
-<li>Frontend: http://localhost:3000</li>
-<li>Backend: http://localhost:5000</li>
-</ul>
-
-<h2>Project Structure (after installing dependencies)</h2>
-
-<pre><code>LearningPlatform/
+## Project Structure (after installing dependencies)
+```
+learning-reflection-platform/
 │
 ├── client/
 │   ├── node_modules/
 │   └── ...
 │
 ├── server/
-│   └── ...
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
 │
-│
+├── .gitignore
 ├── node_modules/
 ├── package.json
-├── package-lock.json
-</code></pre>
+└── package-lock.json
+```
+*Note: Dependencies are installed in both root and client folders. Run npm install in both locations.*
 
-<p><i>Note: Dependencies are installed in both root and client folders. Run npm install in both locations.</i></p>
+## API Endpoints
 
-<h2>API Endpoints</h2>
+### Auth
+- POST /api/auth/register
+- POST /api/auth/login
 
-<h3>Auth</h3>
-<ul>
-<li>POST /api/auth/register</li>
-<li>POST /api/auth/login</li>
-</ul>
+### Learning
+- GET /api/learning
+- POST /api/learning
+- PUT /api/learning/:id
+- DELETE /api/learning/:id
 
-<h3>Learning</h3>
-<ul>
-<li>GET /api/learning</li>
-<li>POST /api/learning</li>
-<li>PUT /api/learning/:id</li>
-<li>DELETE /api/learning/:id</li>
-</ul>
+### User
+- GET /api/user/profile
 
-<h3>User</h3>
-<ul>
-<li>GET /api/user/profile</li>
-</ul>
+## Frontend Pages
+- / - Home / Dashboard
+- /login - Login page
+- /register - Signup page
+- /dashboard - Learning dashboard
+- /profile - User profile
 
-<h2>Frontend Pages</h2>
-<ul>
-<li>/ - Home / Dashboard</li>
-<li>/login - Login page</li>
-<li>/register - Signup page</li>
-<li>/dashboard - Learning dashboard</li>
-<li>/profile - User profile</li>
-</ul>
+## NPM Scripts
 
-<h2>NPM Scripts</h2>
+**Server:**
+```bash
+node server/server.js
+```
 
-<p><b>Server:</b></p>
-<pre><code> node server/server.js</code></pre>
+**Client:**
+```bash
+npm run dev
+```
 
-<p><b>Client:</b></p>
-<pre><code> npm run dev</code></pre>
+## Notes
+- node_modules folders are not included in the repository
+- They will be created automatically after running npm install
+- Run npm install before starting the project
+- Never hardcode your MongoDB URI or JWT secret in the code — use the `.env` file
 
-<h2>Notes</h2>
-<ul>
-<li>node_modules folders are not included in the repository</li>
-<li>They will be created automatically after running npm install</li>
-<li>Run npm install before starting the project</li>
-<li>Ensure MongoDB connection string is correctly configured</li>
-</ul>
+## Future Improvements
+- Notifications and reminders
+- Improved UI/UX
+- Progress analytics
+- Mobile responsiveness
 
-<h2>Future Improvements</h2>
-<ul>
-<li>Notifications and reminders</li>
-<li>Improved UI/UX</li>
-<li>Progress analytics</li>
-<li>Mobile responsiveness</li>
-</ul>
-
-<h2>Authors</h2>
-<ul>
-<li>Amita Kumari</li>
-<li>Anaaya Bhattacharya</li>
-<li>Anjali Gour</li>
-</ul>
+## Authors
+- Amita Kumari
+- Anaaya Bhattacharya
+- Anjali Gour
