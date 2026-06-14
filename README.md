@@ -135,7 +135,6 @@ npm run dev</code></pre>
 ├── server/
 │   └── ...
 │
-├── src/
 │
 ├── node_modules/
 ├── package.json
